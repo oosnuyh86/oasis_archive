@@ -1,0 +1,58 @@
+<h1>Listing archives</h1>
+<!-- quicksearch 로 나중에 elastic search 가능하게 만듬 
+<%= form_tag archives_path class: "form-inline", method: :get do %>
+      <%= text_field_tag :query, params[:search] %>
+      <%= submit_tag "Search", :name => nil %> 
+  <% end %>
+-->
+<%= form_tag archives_path, class: "form-inline", method: :get do %>
+<div class="large-8 small-7 columns"  id="mainsearchtext">
+	<%= text_field_tag :search, params[:search], class: "radius-ls expand", placeholder: "Search Archives" %>
+</div>
+<div class="large-4 small-5 columns" id="mainsearchbutton">
+	<button class=" radius-rs button" type="submit">Search</button>
+</div>
+<% end %>
+
+<% form_tag(archives_path, :method=>'get') do %>
+	<p>
+       		<%= text_field_tag :search, params[:search], class: "radius-ls expand", placeholder: "Search Archives" %>
+		<button class="btn" type="submit"><i class="icon-search"></i></button>
+	</p>
+<% end %>
+<% yield %>
+<div class="large-12 small-12 columns">
+
+		<% if @archives.present? %>
+<table role="grid" >
+	<thead>
+		<tr>
+			<th class="index_table_header">영문 제목</th>
+			<th class="index_table_header">한글 제목</th>
+			<th class="index_table_header">작성 날짜</th>
+<!--			<th class="index_table_header">키워드</th>  --> 
+			<th class="index_table_header">들어가기</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @archives.each do |archive| %>
+			<tr>
+				<td scope="row"><%= archive.title %></td>
+				<td scope="row"><%= archive.kor_title %></td>
+				<td scope="row"><%= archive.release %></td>
+<!--				<td scope="row"><%= archive.keyword_1 %>, <%= archive.keyword_2 %>, <%= archive.keyword_3 %> </td>   -->
+				<td scope="row"><%= link_to "Show", archive, class: "button round" %></td>
+			</tr>
+<% end %>
+<% end %> 
+ 
+	</tbody>
+</table>
+</div>
+
+<br>
+<div class="large-12 small-7 columns">
+<button><%= link_to 'New Archive', new_archive_path  %>
+</button>
+</div>
+

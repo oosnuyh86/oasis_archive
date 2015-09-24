@@ -1,0 +1,13 @@
+<div class="large-12 small-12 columns">
+<ul class="pricing-table" id="show_table">
+  <li class="price" id ="show_eng_title"><div ><%= @archive.title %></div></li>
+  <li class="title" id="subhead"><%= @archive.kor_title %></li>
+  <%= link_to @archive.source_url, :target => "_blank" do  %><li class="title" id="show_link">Go to the link</li><% end %>
+  <li class="bullet-item large-6 small-12 columns" id="show_eng_doc" ><div id="show_eng_doc"><%= @archive.english_doc %></div></li>
+  <li class="description large-6 small-12 columns" id="show_kor_doc"><div id="show_kor_doc"><%= @archive.korean_doc %></div><div><%= link_to @archive.source_url, :target => "_blank" do %>Go to the url<% end %></div></li>
+</ul>
+</div>
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_archive_path(@archive) %> |
+<%= link_to 'Back', archives_path %>

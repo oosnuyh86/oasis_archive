@@ -1,0 +1,21 @@
+[ 2015-09-24 02:16:25.6885 30608/7f1c0f374840 age/Wat/WatchdogMain.cpp:1274 ]: Starting Passenger watchdog...
+[ 2015-09-24 02:16:25.6930 30611/7fdb0adff840 age/Cor/CoreMain.cpp:957 ]: Starting Passenger core...
+[ 2015-09-24 02:16:25.6931 30611/7fdb0adff840 age/Cor/CoreMain.cpp:234 ]: Passenger core running in multi-application mode.
+[ 2015-09-24 02:16:25.6943 30611/7fdb0adff840 age/Cor/CoreMain.cpp:707 ]: Passenger core online, PID 30611
+[ 2015-09-24 02:16:25.6978 30616/7f16d1141840 age/Ust/UstRouterMain.cpp:430 ]: Starting Passenger UstRouter...
+[ 2015-09-24 02:16:25.6983 30616/7f16d1141840 age/Ust/UstRouterMain.cpp:311 ]: Passenger UstRouter online, PID 30616
+2015/09/24 02:16:27 [error] 30630#0: *4 "/home/ec2-user/moviestore/config/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+
+[ 2015-09-24 02:16:37.0452 30611/7fdb0544c700 age/Cor/CoreMain.cpp:507 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-09-24 02:16:37.0453 30611/7fdb0adff840 age/Cor/CoreMain.cpp:876 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-09-24 02:16:37.0453 30611/7fdb04c4b700 Ser/Server.h:752 ]: [ApiServer] Freed 0 spare client objects
+[ 2015-09-24 02:16:37.0453 30611/7fdb04c4b700 Ser/Server.h:443 ]: [ApiServer] Shutdown finished
+[ 2015-09-24 02:16:37.0454 30611/7fdb0544c700 Ser/Server.h:752 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2015-09-24 02:16:37.0455 30611/7fdb0544c700 Ser/Server.h:443 ]: [ServerThr.1] Shutdown finished
+[ 2015-09-24 02:16:37.0459 30611/7fdb0adff840 age/Cor/CoreMain.cpp:942 ]: Passenger core shutdown finished
+
+[ 2015-09-24 02:16:37.0463 30616/7f16cbd83700 age/Ust/UstRouterMain.cpp:337 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-09-24 02:16:37.0464 30616/7f16d1141840 age/Ust/UstRouterMain.cpp:399 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-09-24 02:16:37.0464 30616/7f16cbd83700 Ser/Server.h:752 ]: [LoggerApiServer] Freed 0 spare client objects
+[ 2015-09-24 02:16:37.0464 30616/7f16cbd83700 Ser/Server.h:443 ]: [LoggerApiServer] Shutdown finished
+[ 2015-09-24 02:16:37.0465 30616/7f16d1141840 age/Ust/UstRouterMain.cpp:424 ]: Passenger UstRouter shutdown finished

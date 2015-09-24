@@ -1,0 +1,66 @@
+<%= form_for(@archive) do |f| %>
+  <% if @archive.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archive.errors.count, "error") %> prohibited this archive from being saved:</h2>
+
+      <ul>
+      <% @archive.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="large-10 small-10 columns">
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :kor_title %><br>
+    <%= f.text_field :kor_title %>
+  </div>
+  <div class="field">
+    <%= f.label :source_name %><br>
+    <%= f.text_field :source_name %>
+  </div>
+  <div class="field">
+    <%= f.label :doc_id %><br>
+    <%= f.text_field :doc_id %>
+  </div>
+  <div class="field">
+    <%= f.label :release %><br>
+    <%= f.date_select :release %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword_1 %><br>
+    <%= f.text_field :keyword_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword_2 %><br>
+    <%= f.text_field :keyword_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword_3 %><br>
+    <%= f.text_field :keyword_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :english_doc %><br>
+    <%= f.text_area :english_doc %>
+  </div>
+  <div class="field">
+    <%= f.label :korean_doc %><br>
+    <%= f.text_area :korean_doc %>
+  </div>
+  <div class="field">
+    <%= f.label :translator %><br>
+    <%= f.text_field :translator %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+<% end %>

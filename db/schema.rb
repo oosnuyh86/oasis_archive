@@ -11,12 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140701125957) do
+ActiveRecord::Schema.define(version: 20150917121111) do
+
+  create_table "archives", force: true do |t|
+    t.string   "title"
+    t.string   "kor_title"
+    t.string   "source_name"
+    t.text     "description", limit: 16777215
+    t.string   "doc_id"
+    t.date     "release"
+    t.string   "keyword_1"
+    t.string   "keyword_2"
+    t.string   "keyword_3"
+    t.text     "english_doc", limit: 16777215
+    t.text     "korean_doc",  limit: 16777215
+    t.string   "translator"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "source_url"
+  end
+
+  add_index "archives", ["doc_id"], name: "index_archives_on_doc_id", unique: true, using: :btree
 
   create_table "movies", force: true do |t|
     t.string   "title"
     t.integer  "release_year"
-    t.float    "price"
+    t.float    "price",        limit: 24
     t.text     "description"
     t.string   "imdb_id"
     t.string   "poster_url"

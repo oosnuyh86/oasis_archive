@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :archives
+
   get 'carts/show'
 
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
-  resources :movies, only: [:show, :index]
+  resources :archives, only: [:show, :index]
   resource :cart, only: [:show] do
     put 'add/:movie_id', to: 'carts#add', as: :add_to
     put 'remove/:movie_id', to: 'carts#remove', as: :remove_from
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'movies#index'
+  root 'archives#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

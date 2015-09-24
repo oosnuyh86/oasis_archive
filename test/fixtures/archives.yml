@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  source_id: 
+  release: 2015-09-06
+  keyword_1: MyString
+  keyword_2: MyString
+  keyword_3: MyString
+  english_doc: MyText
+  korean_doc: MyText
+  translator_id: 
+  doc_id: MyString
+
+two:
+  title: MyString
+  description: MyText
+  source_id: 
+  release: 2015-09-06
+  keyword_1: MyString
+  keyword_2: MyString
+  keyword_3: MyString
+  english_doc: MyText
+  korean_doc: MyText
+  translator_id: 
+  doc_id: MyString

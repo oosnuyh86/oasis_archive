@@ -346,7 +346,7 @@ $anchor-font-color-hover: #fff;
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
 // $button-sml: rem-calc(14);
-$button-med: rem-calc(10);
+$button-med: rem-calc(8.9899);
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
@@ -1198,8 +1198,8 @@ $topbar-bg-color: rgba(255, 255, 255, 0);
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: 45px;
-$topbar-margin-bottom: 30px;
+$topbar-height: 2.8125rem;
+$topbar-margin-bottom: 1.875rem;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
@@ -1304,5 +1304,92 @@ $topbar-link-padding: $topbar-height / 3;
 // $range-slider-handle-round: $global-rounded;
 // $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
 // $range-slider-handle-cursor: pointer;
+$include-html-pricing-classes: $include-html-classes;
 
+// We use this to control the border color
+$price-table-border: solid 1px $gainsboro;
+
+// We use this to control the bottom margin of the pricing table
+$price-table-margin-bottom: rem-calc(20);
+
+// We use these to control the title styles
+$price-title-bg: $oil;
+$price-title-padding: rem-calc(15 20);
+$price-title-align: center;
+$price-title-color: $smoke;
+$price-title-weight: $font-weight-normal;
+$price-title-size: rem-calc(16);
+$price-title-font-family: $body-font-family;
+
+// We use these to control the price styles
+$price-money-bg: $vapor;
+$price-money-padding: rem-calc(15 20);
+$price-money-align: center;
+$price-money-color: $oil;
+$price-money-weight: $font-weight-normal;
+$price-money-size: rem-calc(32);
+$price-money-font-family: $body-font-family;
+
+
+// We use these to control the description styles
+$price-bg: $white;
+$price-desc-color: $monsoon;
+$price-desc-padding: rem-calc(15);
+$price-desc-align: center;
+$price-desc-font-size: rem-calc(12);
+$price-desc-weight: $font-weight-normal;
+$price-desc-line-height: 1.4;
+$price-desc-bottom-border: dotted 1px $gainsboro;
+
+// We use these to control the list item styles
+$price-item-color: $oil;
+$price-item-padding: rem-calc(15);
+$price-item-align: center;
+$price-item-font-size: rem-calc(14);
+$price-item-weight: $font-weight-normal;
+$price-item-bottom-border: dotted 1px $gainsboro;
+
+// We use these to control the CTA area styles
+$price-cta-bg: $white;
+$price-cta-align: center;
+$price-cta-padding: rem-calc(20 20 0);
+// These control the background color for the table and even rows
+$include-html-table-classes: $include-html-classes;
+$table-bg: $white;
+$table-even-row-bg: $snow;
+
+// These control the table cell border style
+$table-border-style: solid;
+$table-border-size: 1px;
+$table-border-color: $gainsboro;
+
+// These control the table head styles
+$table-head-bg: $white-smoke;
+$table-head-font-size: rem-calc(14);
+$table-head-font-color: $jet;
+$table-head-font-weight: $font-weight-bold;
+$table-head-padding: rem-calc(8 10 10);
+
+// These control the table foot styles
+$table-foot-bg: $table-head-bg;
+$table-foot-font-size: $table-head-font-size;
+$table-foot-font-color: $table-head-font-color;
+$table-foot-font-weight: $table-head-font-weight;
+$table-foot-padding: $table-head-padding;
+
+// These control the caption
+$table-caption-bg: transparent;
+$table-caption-font-color: $table-head-font-color;
+$table-caption-font-size: rem-calc(16);
+$table-caption-font-weight: bold;
+
+// These control the row padding and font styles
+$table-row-padding: rem-calc(9 10);
+$table-row-font-size: rem-calc(14);
+$table-row-font-color: $jet;
+$table-line-height: rem-calc(18);
+
+// These are for controlling the display and margin of tables
+$table-display: table-cell;
+$table-margin-bottom: rem-calc(20);
 @import 'foundation';
